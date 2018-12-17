@@ -1,10 +1,10 @@
 var shuffleSeed = require('shuffle-seed')
 window.onload = getData;
 
-function getIdentity(foundcity, foundstate, foundcountry){
-	if(foundstate == "CA" && foundcity == "Saratoga" {
+function getIdentity(foundcity, foundstate, foundcountry) {
+	if(foundstate == "CA" && foundcity == "Saratoga") {
 		return "Somya";
-	}else if(foundstate == "WA") {
+	} else if(foundstate == "WA") {
 		return "Peter";
 	} else if(foundstate == "CA" && foundcity == "Folsom") {
 		return "Annie";
