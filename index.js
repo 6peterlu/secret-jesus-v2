@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ReactRevealText from 'react-reveal-text'
 import 'shuffle-Seed'
+import 'randomized'
 
 function getIdentity(foundcity, foundstate) {
 	if(foundstate == "California" && foundcity == "Saratoga") {
@@ -87,7 +88,7 @@ if (identity !== "All") {
   ReactDOM.render(<Wrapper name={identity}/>, header);
 }
 ReactDOM.render(<BorderImage imgsrc = {"plasma.jpg"}/>, photo);
-ReactDOM.render(<Wrapper name={target}/>,giftee)
+ReactDOM.render(<Wrapper name={target}/>,giftee);
 
 //get targets
 if(identity != "All"){
