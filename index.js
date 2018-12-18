@@ -139,19 +139,19 @@ if (identity !== "All") {
 	let temp = document.createElement("div");
 	poemStanzaOne.forEach(function(line, i) {
 		temp = document.createElement("div");
-		ReactDOM.hydrate(<FadeText text={line} timeout={2000 * i}/>, temp);
+		ReactDOM.hydrate(<FadeText text={line} timeout={3000 * i}/>, temp);
 		header.appendChild(temp);
 	});
 	header.appendChild(document.createElement("br"));
 	temp = document.createElement("div");
-ReactDOM.hydrate(<TwoToneText text1=" " text2={identity} text3=" sprang to his sleigh, to his/her team gave a whistle," timeout={2000 * poemStanzaOne.length}/>, temp);
+ReactDOM.hydrate(<TwoToneText text1=" " text2={identity} text3=" sprang to his sleigh, to his/her team gave a whistle," timeout={3000 * poemStanzaOne.length}/>, temp);
 	header.appendChild(temp);
 	poemStanzaTwo.forEach(function(line, i) {
 		temp = document.createElement("div");
-		ReactDOM.hydrate(<FadeText text={line} timeout={2000 * (i + poemStanzaOne.length + 1)}/>, temp);
+		ReactDOM.hydrate(<FadeText text={line} timeout={3000 * (i + poemStanzaOne.length + 1)}/>, temp);
 		header.appendChild(temp);
 	});
 	temp = document.createElement("div");
-	ReactDOM.hydrate(<TwoToneText text1="Merry Christmas to " text2={target} text3=", and to all a good night!" timeout={2000 * (poemStanzaOne.length + poemStanzaTwo.length + 1)}/>, temp);
+	ReactDOM.hydrate(<TwoToneText text1="Merry Christmas to " text2={target} text3=", and to all a good night!" timeout={3000 * (poemStanzaOne.length + poemStanzaTwo.length + 1)}/>, temp);
 	header.appendChild(temp);
 }
