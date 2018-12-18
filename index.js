@@ -19,6 +19,21 @@ function getIdentity(foundcity, foundstate) {
 	}
 }
 
+function getLocation() {
+	let x = document.querySelector('#demo');
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+	let x = document.querySelector('#demo');
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+
 const styles = {
   header: {
     textAlign: 'center',
@@ -102,6 +117,8 @@ class TwoToneText extends React.Component {
 
 const header = document.querySelector('#header');
 const photo = document.querySelector('#photo');
+const clickbutton = document.querySelector('#clickme');
+clickbutton.onclick = getLocation;
 
 // Geolocation
 const foundcity = geoplugin_city();
