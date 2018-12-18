@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --mode development",
     "build": "npx webpack --mode production",
-    "start": "npx webpack --mode production && node server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,7 @@
     "@babel/plugin-syntax-import-meta": "^7.0.0",
     "@babel/preset-env": "^7.2.0",
     "@babel/runtime": "^7.0.0",
+    "babel-loader": "^8.0.4",
     "express": "^4.16.4",
     "nodemon": "^1.18.9",
     "path": "^0.12.7",
