@@ -132,7 +132,6 @@ if(identity != "All"){
 	var randomized = shuffleSeed.shuffle(targets, seed);
 	var targetIndex = (randomized.indexOf(identity) + 1) % targets.length;
 	var target = randomized[targetIndex];
-	console.log(randomized[targetIndex],targetIndex)
 }
 
 if (identity !== "All") {
