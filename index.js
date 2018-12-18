@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ReactRevealText from 'react-reveal-text'
-import 'shuffle-Seed'
-import 'randomized'
+import shuffleSeed from 'shuffle-seed'
 
 function getIdentity(foundcity, foundstate) {
 	if(foundstate == "California" && foundcity == "Saratoga") {
@@ -84,12 +83,6 @@ const foundcity = geoplugin_city();
 const foundstate = geoplugin_region();
 const identity = getIdentity(foundcity, foundstate);
 
-if (identity !== "All") {
-  ReactDOM.render(<Wrapper name={identity}/>, header);
-}
-ReactDOM.render(<BorderImage imgsrc = {"plasma.jpg"}/>, photo);
-ReactDOM.render(<Wrapper name={target}/>,giftee);
-
 //get targets
 if(identity != "All"){
 	var targets = ["Peter", "Lewis", "Annie", "Somya", "Ashley"];
@@ -97,3 +90,11 @@ if(identity != "All"){
 	var randomized = shuffleSeed.shuffle(targets, seed);
 	var targetIndex = (randomized.indexOf(identity) + 1) % targets.length;
 	var target = randomized[targetIndex];
+	console.log(randomized[targetIndex],targetIndex)
+}
+
+if (identity !== "All") {
+  ReactDOM.render(<Wrapper name={identity}/>, header);
+}
+ReactDOM.render(<BorderImage imgsrc = {"plasma.jpg"}/>, photo);
+ReactDOM.render(<Wrapper name={target}/>,giftee);
