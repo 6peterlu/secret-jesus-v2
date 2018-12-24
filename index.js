@@ -22,7 +22,7 @@ import shuffleSeed from 'shuffle-seed'
 
 function setIdentity(identity) {
 	//get targets
-	var seed = "randfewg";
+	var seed = "one persons trashley is another ones treasure";
 	var randomized = shuffleSeed.shuffle(targets, seed);
 	var targetIndex = (randomized.indexOf(identity) + 1) % targets.length;
 	var target = randomized[targetIndex];
@@ -284,33 +284,3 @@ function renderRemainder(identity, target) {
 				footer.appendChild(temp);
 		}
 }
-	// poemStanzaOne.forEach(function(line, i) {
-	// 	temp = document.createElement("div");
-	// 	ReactDOM.hydrate(<FadeText text={line} timeout={animationSpeed * i}/>, temp);
-	// 	header.appendChild(temp);
-	// });
-	// header.appendChild(document.createElement("br"));
-	// temp = document.createElement("div");
-	// if (identity === 'Lewis' || identity === 'Peter') { // male pronouns
-	// 	ReactDOM.hydrate(<TwoToneText text1=" " text2={identity} text3=" sprang to his sleigh, to his team gave a whistle," timeout={animationSpeed * poemStanzaOne.length}/>, temp);
-	// 		header.appendChild(temp);
-	// 		poemStanzaTwoMale.forEach(function(line, i) {
-	// 			temp = document.createElement("div");
-	// 			ReactDOM.hydrate(<FadeText text={line} timeout={animationSpeed * (i + poemStanzaOne.length + 1)}/>, temp);
-	// 			header.appendChild(temp);
-	// 		});
-	// 		temp = document.createElement("div");
-	// 		ReactDOM.hydrate(<TwoToneText text1="Merry Christmas to " text2={target} text3=", and to all a good night!" timeout={animationSpeed * (poemStanzaOne.length + poemStanzaTwoMale.length + 1)}/>, temp);
-	// 		header.appendChild(temp);
-	// 	} else { // female pronouns
-	// 		ReactDOM.hydrate(<TwoToneText text1=" " text2={identity} text3=" sprang to her sleigh, to her team gave a whistle," timeout={animationSpeed * poemStanzaOne.length}/>, temp);
-	// 			header.appendChild(temp);
-	// 			poemStanzaTwoFemale.forEach(function(line, i) {
-	// 				temp = document.createElement("div");
-	// 				ReactDOM.hydrate(<FadeText text={line} timeout={animationSpeed * (i + poemStanzaOne.length + 1)}/>, temp);
-	// 				header.appendChild(temp);
-	// 			});
-	// 			temp = document.createElement("div");
-	// 			ReactDOM.hydrate(<TwoToneText text1="Merry Christmas to " text2={target} text3=", and to all a good night!" timeout={animationSpeed * (poemStanzaOne.length + poemStanzaTwoFemale.length + 1)}/>, temp);
-	// 			header.appendChild(temp);
-	// 	}
